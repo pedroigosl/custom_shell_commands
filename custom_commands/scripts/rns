@@ -1,0 +1,12 @@
+#!/bin/bash
+# Run and Shutdown
+
+echo "Running script: $@"
+$@
+
+echo "Shutdown in 1 minute..."
+shutdown -P 1
+read -n 1 -s -p "To cancel shutdown, press any key " key
+shutdown -c
+echo 
+echo "Shutdown stopped"
